@@ -1,0 +1,373 @@
+/* =========================
+   COSMIC CATCHER
+   Main Stylesheet
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #030414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* =========================
+   SPACE BACKGROUND
+   ========================= */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 20% 70%, white, transparent),
+        radial-gradient(2px 2px at 30% 40%, white, transparent),
+        radial-gradient(1px 1px at 40% 85%, white, transparent),
+        radial-gradient(2px 2px at 50% 15%, white, transparent),
+        radial-gradient(1px 1px at 60% 60%, white, transparent),
+        radial-gradient(2px 2px at 70% 30%, white, transparent),
+        radial-gradient(1px 1px at 80% 80%, white, transparent),
+        radial-gradient(2px 2px at 90% 45%, white, transparent);
+    animation: starsMove 8s linear infinite;
+}
+
+body::after {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(50, 70, 180, 0.12),
+            transparent 55%
+        );
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.game-header {
+    padding: 25px 15px 12px;
+}
+
+.game-header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.game-header p {
+    color: #b8c7ff;
+    font-size: 16px;
+}
+
+/* =========================
+   GAME INFORMATION
+   ========================= */
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 850px;
+    margin: 15px auto;
+    padding: 0 10px;
+}
+
+.info-box {
+    min-width: 105px;
+    padding: 11px 15px;
+    background: rgba(15, 20, 55, 0.9);
+    border: 1px solid #3949ab;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(57, 73, 171, 0.2);
+}
+
+.info-box span {
+    display: block;
+    margin-bottom: 5px;
+    color: #aeb8ff;
+    font-size: 13px;
+}
+
+.info-box strong {
+    display: block;
+    color: white;
+    font-size: 20px;
+}
+
+/* =========================
+   GAME CONTAINER
+   ========================= */
+
+.game-container {
+    position: relative;
+    width: 800px;
+    max-width: 95%;
+    margin: 20px auto;
+}
+
+/* =========================
+   CANVAS
+   ========================= */
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    background: #02030d;
+
+    border: 2px solid #4b5cff;
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 15px rgba(70, 80, 255, 0.25),
+        0 0 35px rgba(70, 80, 255, 0.1);
+}
+
+/* =========================
+   GAME SCREENS
+   ========================= */
+
+.game-screen {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    background: rgba(5, 8, 30, 0.96);
+
+    border: 2px solid #536dfe;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px rgba(83, 109, 254, 0.35),
+        0 0 45px rgba(83, 109, 254, 0.12);
+
+    z-index: 5;
+}
+
+.game-screen h2 {
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.game-screen p {
+    color: #c7ceff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.game-screen strong {
+    display: block;
+    font-size: 42px;
+    margin: 10px 0 20px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+    padding: 12px 26px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #536dfe;
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: #7185ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(83, 109, 254, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+button:focus {
+    outline: 2px solid #aeb8ff;
+    outline-offset: 3px;
+}
+
+/* =========================
+   CONTROLS
+   ========================= */
+
+.controls {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 15px auto;
+    padding: 0 15px;
+
+    color: #aeb8ff;
+    font-size: 14px;
+}
+
+.controls strong {
+    color: white;
+}
+
+/* =========================
+   HIDDEN ELEMENT
+   ========================= */
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin: 20px 0 25px;
+
+    color: #6f78a8;
+    font-size: 13px;
+}
+
+/* =========================
+   STAR ANIMATION
+   ========================= */
+
+@keyframes starsMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .game-header {
+        padding-top: 18px;
+    }
+
+    .game-header h1 {
+        font-size: 30px;
+    }
+
+    .game-header p {
+        font-size: 14px;
+    }
+
+    .game-info {
+        gap: 7px;
+    }
+
+    .info-box {
+        min-width: 75px;
+        padding: 8px 10px;
+    }
+
+    .info-box span {
+        font-size: 11px;
+    }
+
+    .info-box strong {
+        font-size: 16px;
+    }
+
+    .game-container {
+        max-width: 94%;
+    }
+
+    .game-screen {
+        width: 88%;
+        padding: 22px;
+    }
+
+    .game-screen h2 {
+        font-size: 23px;
+    }
+
+    .game-screen p {
+        font-size: 14px;
+    }
+
+    .game-screen strong {
+        font-size: 34px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .controls {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .game-header h1 {
+        font-size: 25px;
+    }
+
+    .game-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+    }
+
+    .info-box {
+        min-width: 0;
+    }
+
+    .game-screen {
+        width: 90%;
+        padding: 18px;
+    }
+}
