@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cosmic Catcher</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Game Header -->
+    <header class="game-header">
+        <h1>🌌 Cosmic Catcher</h1>
+        <p>Catch the stars and avoid the meteors!</p>
+    </header>
+
+    <!-- Game Information -->
+    <section class="game-info">
+
+        <div class="info-box">
+            <span>Score</span>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Lives</span>
+            <strong id="lives">❤️❤️❤️</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Time</span>
+            <strong id="timer">60</strong>
+        </div>
+
+        <div class="info-box">
+            <span>Best</span>
+            <strong id="highScore">0</strong>
+        </div>
+
+    </section>
+
+    <!-- Game Area -->
+    <main class="game-container">
+
+        <canvas id="gameCanvas" width="800" height="500">
+            Your browser does not support HTML Canvas.
+        </canvas>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="game-screen">
+
+            <h2>🚀 Cosmic Catcher</h2>
+
+            <p>
+                Catch ⭐ stars to increase your score.
+                <br>
+                Avoid ☄️ meteors or lose a life.
+            </p>
+
+            <button id="startButton">Start Game</button>
+
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="game-screen hidden">
+
+            <h2>Game Over!</h2>
+
+            <p>Your Score:</p>
+
+            <strong id="finalScore">0</strong>
+
+            <button id="restartButton">Play Again</button>
+
+        </div>
+
+    </main>
+
+    <!-- Controls -->
+    <section class="controls">
+
+        <p>
+            Use <strong>← →</strong> or <strong>A / D</strong>
+            to move the catcher.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with HTML, CSS and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
