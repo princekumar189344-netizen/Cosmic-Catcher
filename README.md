@@ -45,12 +45,12 @@ The goal is to get the highest score possible before the timer reaches zero or a
 
 ## 🎮 Controls
 
-←/A  Move Left
-→/D  Move Right
+1. ←/A  Move Left
+2. →/D  Move Right
 
 --- 
 
-## ⭐ Scoring System
+## ⭐ Scoring Syst
 
 Object | Effect
 
@@ -184,7 +184,7 @@ The game loop:
 - Moves falling objects.
 - Creates new objects.
 - Checks collisions.
--  Updates the score and lives.
+- Updates the score and lives.
 - Draws the objects.
 - Draws the player.
 
