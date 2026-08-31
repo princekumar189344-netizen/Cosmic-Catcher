@@ -44,7 +44,8 @@ High score is saved in `localStorage` so it stays even after refresh.
 
 ### CSS
 
-<img width="1366" height="720" alt="Screenshot 2026-08-31 165252" src="https://github.com/user-attachments/assets/80ffaf14-e66b-49be-a2cf-b9c62e13021c" />
+<img width="1366" height="720" alt="Screenshot 2026-08-31 172920" src="https://github.com/user-attachments/assets/9f7b4085-aa20-4a41-9a9a-67f0f30a7e07" />
+
 
 ### Javascript
 
