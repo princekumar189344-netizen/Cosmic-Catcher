@@ -69,3 +69,25 @@ Open the game in a browser, press Start Game, and use the Left/Right arrow keys 
 ## Photos
 
 #### HTML 
+
+<img width="1366" height="720" alt="Screenshot 2026-08-31 165236" src="https://github.com/user-attachments/assets/cf220aa4-c7d8-4cfc-ba9b-38025e8f77e0" />
+
+### CSS
+
+<img width="1366" height="720" alt="Screenshot 2026-08-31 165252" src="https://github.com/user-attachments/assets/f254a728-a8d6-4ff1-8ba2-7764c791c626" />
+
+### JavaScript
+
+<img width="1366" height="720" alt="Screenshot 2026-08-31 165309" src="https://github.com/user-attachments/assets/f7fde391-e2bc-4c0d-b95d-24a7efdef0cf" />
+
+---
+
+## Author 
+
+**Prince Kumar**
+
+---
+
+## Final 
+
+<img width="1365" height="720" alt="Screenshot 2026-08-30 213945" src="https://github.com/user-attachments/assets/0e6c6fa5-c452-4446-b2ca-ce1c58d1ed29" />
