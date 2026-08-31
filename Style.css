@@ -1,0 +1,242 @@
+/* Cosmic Catcher - Main Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #050619;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Header */
+
+header {
+    padding: 25px 15px 15px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #b9c4ff;
+    font-size: 16px;
+}
+
+/* Game Information */
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 850px;
+    margin: 15px auto;
+    padding: 0 10px;
+}
+
+.info-box {
+    min-width: 110px;
+    padding: 12px 15px;
+    background: rgba(20, 25, 65, 0.9);
+    border: 1px solid #536dfe;
+    border-radius: 10px;
+}
+
+.info-box span {
+    display: block;
+    color: #aebaff;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.info-box strong {
+    font-size: 20px;
+}
+
+/* Game Area */
+
+.game-container {
+    position: relative;
+    width: 800px;
+    max-width: 94%;
+    margin: 20px auto;
+}
+
+/* Canvas */
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #02030d;
+    border: 2px solid #536dfe;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(83, 109, 254, 0.3);
+}
+
+/* Start and Game Over Screens */
+
+.game-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    background: rgba(7, 10, 35, 0.96);
+    border: 2px solid #7185ff;
+    border-radius: 16px;
+
+    box-shadow: 0 0 30px rgba(83, 109, 254, 0.3);
+}
+
+.game-screen h2 {
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.game-screen p {
+    color: #c8d0ff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.game-screen strong {
+    display: block;
+    font-size: 42px;
+    margin: 10px 0 20px;
+}
+
+/* Buttons */
+
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+
+    background: #536dfe;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #7185ff;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Controls */
+
+.controls {
+    margin: 15px auto;
+    padding: 0 15px;
+    color: #aeb8ff;
+}
+
+.controls strong {
+    color: white;
+}
+
+/* Hidden Elements */
+
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+
+footer {
+    margin: 25px 0;
+    color: #737ca8;
+    font-size: 13px;
+}
+
+/* Mobile Design */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .game-info {
+        gap: 7px;
+    }
+
+    .info-box {
+        min-width: 80px;
+        padding: 9px;
+    }
+
+    .info-box span {
+        font-size: 11px;
+    }
+
+    .info-box strong {
+        font-size: 16px;
+    }
+
+    .game-screen {
+        width: 88%;
+        padding: 22px;
+    }
+
+    .game-screen h2 {
+        font-size: 23px;
+    }
+
+    .game-screen p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .game-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+    }
+
+    .info-box {
+        min-width: 0;
+    }
+
+    .game-screen {
+        width: 90%;
+        padding: 18px;
+    }
+}
